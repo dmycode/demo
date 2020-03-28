@@ -1,0 +1,22 @@
+server:
+  port: 8888
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@10.132.21.66:1521/casdev
+    username: casdev
+    password: CdeC3f#g
+    driver-class-name: oracle.jdbc.OracleDriver
+    initial-size: 1
+    max-active: 50
+    min-idle: 1
+    max-wait: 60000
+    pool-prepared-statements: true
+    max-pool-prepared-statement-per-connection-size: 50
+    max-open-prepared-statements: 50
+    validation-query: select SYSDATE from dual
+    validation-query-timeout: 30000
+    test-on-borrow: true
+    test-on-return: true
+    test-while-idle: true
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 30000

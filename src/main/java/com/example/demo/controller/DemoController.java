@@ -34,7 +34,6 @@ public class DemoController {
 	public ServiceResult judageScore(Integer score) {
 		ServiceResult serviceResult = new ServiceResult(
 		        ServiceResult.STATE_SUCCESS);
-
 		try {
 			String result = demoService.judageScore(score);
 			serviceResult.setResult(result);

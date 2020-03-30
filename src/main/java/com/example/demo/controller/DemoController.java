@@ -27,20 +27,31 @@ import com.example.demo.vo.web.ServiceResult;
 @RestController
 public class DemoController {
 
-	@Autowired
-	private DemoService demoService;
+    @Autowired
+    private DemoService demoService;
 
-	@RequestMapping(value = "/judageScore", method = RequestMethod.GET)
-	public ServiceResult judageScore(Integer score) {
-		ServiceResult serviceResult = new ServiceResult(
-		        ServiceResult.STATE_SUCCESS);
+    /**
+     * 
+    * @Title: judageScore
+    * @Description: TODO(这里用一句话描述这个方法的作用)
+    * @param score
+    * @return 
+    * ServiceResult 返回类型
+    * @author dy
+    	* @date 2020年3月30日
+    * @throws
+     */
+    @RequestMapping(value = "/judageScore", method = RequestMethod.GET)
+    public ServiceResult judageScore(Integer score) {
+        ServiceResult serviceResult = new ServiceResult(
+                ServiceResult.STATE_SUCCESS);
 
-		try {
-			String result = demoService.judageScore(score);
-			serviceResult.setResult(result);
-		} catch (Exception e) {
-			serviceResult.setFail(e.getMessage());
-		}
-		return serviceResult;
-	}
+        try {
+            String result = demoService.judageScore(score);
+            serviceResult.setResult(result);
+        } catch (Exception e) {
+            serviceResult.setFail(e.getMessage());
+        }
+        return serviceResult;
+    }
 }

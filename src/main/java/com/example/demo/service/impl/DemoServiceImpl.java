@@ -36,17 +36,18 @@ public class DemoServiceImpl implements DemoService {
 	@Override
 	public String judageScore(Integer score) throws Exception {
 		Assert.notNull(score, "成绩不能为空");
-		String result = "成绩无效";
+		String result = "成绩无效";//输入错误提示
+		//（定义一个String的result的变量，结果赋值给result）
 		if (score >= 90) {
-			result = "A";
-		} else if (score >= 80) {
-			result = "B";
+			result = "A";     //输入数据满足条件时，终止程序并输出结果
+		} else if (score >= 80) {//不瞒足条件时，继续向下运行程序
+			result = "B";       //以此类推
 		} else if (score >= 60) {
 			result = "C";
 		} else if (score >= 0) {
 			result = "D";
 		}
-		return result;
+		return result;  // 终止程序
 	}
 
 }

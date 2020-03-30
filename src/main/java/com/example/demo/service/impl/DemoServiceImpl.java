@@ -47,7 +47,7 @@ public class DemoServiceImpl implements DemoService {
 		} else if (score >= 0) {
 			result = "D";
 		}
-		return result;  // 终止程序
+		return result;  // 终止程序。
 	}
 
 }

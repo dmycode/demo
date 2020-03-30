@@ -24,6 +24,7 @@ import com.example.demo.service.DemoService;
 @Service
 public class DemoServiceImpl implements DemoService {
 
+<<<<<<< HEAD
     /**
      * @Title:judageScore
      * @Description:TODO(这里用一句话描述这个方法的作用)
@@ -49,5 +50,31 @@ public class DemoServiceImpl implements DemoService {
         }
         return result; // 终止程序。
     }
+=======
+	/**
+	* @Title:judageScore
+	* @Description:TODO(这里用一句话描述这个方法的作用)
+	* @param score
+	* @return
+	* @throws Exception
+	* @see com.example.demo.service.DemoService#judageScore(java.lang.Integer)
+	*/
+
+	@Override
+	public String judageScore(Integer score) throws Exception {
+		Assert.notNull(score, "成绩不能为空");
+		String result = "成绩无效";
+		if (score >= 90) {
+			result = "A";
+		} else if (score >= 80) {
+			result = "B";
+		} else if (score >= 60) {
+			result = "C";
+		} else if (score >= 0) {
+			result = "D";
+		}
+		return result;
+	}
+>>>>>>> 80088b94c811e14e88a690b1856044424a2bc31b
 
 }

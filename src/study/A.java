@@ -6,7 +6,7 @@ package study;
  * 3、2020年3月30日
  * 4、\n还行符、\t制表符
  * 5、print后的信息不能换行，println后的信息能换行
- * ？？？print语句后面跟着println的语句不显示println的信息？？？*/
+  * ？？？print语句后面跟着println的语句不显示println的信息？？？*/
 public class A {
 
     public static void main(String[] args) {

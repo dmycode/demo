@@ -24,7 +24,7 @@ import com.example.demo.service.DemoService;
 @Service
 public class DemoServiceImpl implements DemoService {
 
-<<<<<<< HEAD
+    <<<<<<<HEAD
     /**
      * @Title:judageScore
      * @Description:TODO(这里用一句话描述这个方法的作用)
@@ -50,8 +50,8 @@ public class DemoServiceImpl implements DemoService {
         }
         return result; // 终止程序。
     }
-=======
-	/**
+
+    /**
 	* @Title:judageScore
 	* @Description:TODO(这里用一句话描述这个方法的作用)
 	* @param score
@@ -74,7 +74,6 @@ public class DemoServiceImpl implements DemoService {
 			result = "D";
 		}
 		return result;
-	}
->>>>>>> 80088b94c811e14e88a690b1856044424a2bc31b
+	}>>>>>>>80088 b94c811e14e88a690b1856044424a2bc31b
 
 }

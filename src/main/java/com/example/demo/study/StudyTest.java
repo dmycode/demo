@@ -2,39 +2,42 @@ package com.example.demo.study;
 
 import java.util.Scanner;
 
-/*
- * 三元运算符
- * （操作数）？值1：值2：
- * 参数是一个数字，
- * 如果这个大于100，返回“正确”，否则返回“错误”
- * 写一个方法，用三元运算符，参数是一个数字，如果这个大于100，返回“正确”，否则返回“错误”
- */
 public class StudyTest {
-
     public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        int a = 0;
-        Scanner input = new Scanner(System.in);
-        System.out.println("请输入数值：");
-        a = input.nextInt();
-        System.out.println(a > 100 ? true : false);
-    }
+        // if语句
+        Scanner jer = new Scanner(System.in);
 
-    /**
-     * 
-        * @Title: test
-        * @Description:不要写main方法，这个方法在一个项目中除了测试类，应该只有一个
-        * 返回是"正确"或"错误",不是true或false
-        * @param arg
-        * @return 
-        * String 返回类型
-        * @author dy
-    	* @date 2020年4月2日
-        * @throws
-     */
-    public String test(int arg) {
-        String result = "";
-        result = arg > 100 ? "正确" : "错误";
-        return result;
-    };
+        System.out.println("请输入小吉尔的长度：");
+        int a = jer.nextInt();
+        System.out.println("请输入小香b的深度：");
+        int b = jer.nextInt();
+        if (a < b) {
+            System.out.println("你不行");
+        } else if (a > b) {
+            System.out.println("绝顶高潮");
+        } else {
+            System.out.println("勉勉强强");
+        }
+        // for循环+嵌套循环
+        for (int i = 1; i < 24; i++) {
+            for (int j = 0; j < 60; j++) {
+
+                if (i == 15) {
+                    // break;循环程序执行到15时，立即终止循环
+                    continue;// 跳过该次循环
+                }
+                System.out.println(i + "时" + j + "分");
+            }
+        }
+        // while循环
+        int c = 1;
+        int sum = 0;
+        while (c <= 100) {
+            c++;
+            if (c % 2 == 1) {
+                sum += c;
+            }
+        }
+        System.out.println("奇数和：" + sum);
+    }
 }

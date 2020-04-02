@@ -12,11 +12,11 @@ public class StudyTest {
         System.out.println("请输入小香b的深度：");
         int b = jer.nextInt();
         if (a < b) {
-            System.out.println("你不行");
+            System.out.println("你爽我不爽");
         } else if (a > b) {
-            System.out.println("绝顶高潮");
+            System.out.println("你爽我也爽");
         } else {
-            System.out.println("勉勉强强");
+            System.out.println("毫无滋味，一般一般");
         }
         // for循环+嵌套循环
         for (int i = 1; i < 24; i++) {

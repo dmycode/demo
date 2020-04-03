@@ -1,6 +1,11 @@
 package com.example.demo.study;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Scanner;
+
+import antlr.collections.List;
+import net.bytebuddy.asm.Advice.This;
 
 public class StudyTest {
     public static void main(String[] args) {
@@ -39,5 +44,25 @@ public class StudyTest {
             }
         }
         System.out.println("奇数和：" + sum);
+        forMethod();
+    }
+
+    public static void forMethod() {
+        ArrayList<Integer> list = new ArrayList<Integer>();
+        list.add(1);
+
+        for (int i = 0; i < list.size(); i++) {
+            int result = list.get(i);
+            System.out.println(result);
+        }
+        for (Iterator<Integer> iterator = list.iterator(); iterator
+                .hasNext();) {
+            int result = iterator.next();
+            System.out.println(result);
+        }
+        for (Integer object : list) {
+            int result = object;
+            System.out.println(result);
+        }
     }
 }

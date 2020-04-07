@@ -2,62 +2,27 @@ package com.example.demo.study;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.Scanner;
-
-import antlr.collections.List;
-import net.bytebuddy.asm.Advice.This;
 
 public class StudyTest {
-    public static void main(String[] args) {
-        // if语句
-        Scanner jer = new Scanner(System.in);
-
-        System.out.println("请输入小吉尔的长度：");
-        int a = jer.nextInt();
-        System.out.println("请输入小香b的深度：");
-        int b = jer.nextInt();
-        if (a < b) {
-            System.out.println("你爽我不爽");
-        } else if (a > b) {
-            System.out.println("你爽我也爽");
-        } else {
-            System.out.println("毫无滋味，一般一般");
-        }
-        // for循环+嵌套循环
-        for (int i = 1; i < 24; i++) {
-            for (int j = 0; j < 60; j++) {
-
-                if (i == 15) {
-                    // break;循环程序执行到15时，立即终止循环
-                    continue;// 跳过该次循环
-                }
-                System.out.println(i + "时" + j + "分");
-            }
-        }
-        // while循环
-        int c = 1;
-        int sum = 0;
-        while (c <= 100) {
-            c++;
-            if (c % 2 == 1) {
-                sum += c;
-            }
-        }
-        System.out.println("奇数和：" + sum);
-        forMethod();
-    }
-
     public static void forMethod() {
+        // public static:修饰符 void:结果返回类型 forMethod():方法名称(参数类型 参数值)
+
         ArrayList<Integer> list = new ArrayList<Integer>();
+
+        // Integer是一个类，是int的拓展（int的封装类）。Integer变量的初始化为null。
+        // int用来进行简单的运算；Integer用来声明一个对象
+
         list.add(1);
+        // 初始化list
 
         for (int i = 0; i < list.size(); i++) {
-            int result = list.get(i);
-            System.out.println(result);
+            int result = list.get(i);// 将循环的数据赋值给result
+            System.out.println(result);// 输出result信息
         }
         for (Iterator<Integer> iterator = list.iterator(); iterator
                 .hasNext();) {
-            int result = iterator.next();
+            // .hasNext():迭代器
+            int result = iterator.next();// 每有一个数据赋值给result就会返回一个元素？？？
             System.out.println(result);
         }
         for (Integer object : list) {

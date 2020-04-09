@@ -35,14 +35,14 @@ import com.example.demo.vo.web.ServiceResult;
  */
 @Component
 public class ViewProcess {
-
+    // 太多了！！！！！！！！！！！好多没有学过！！！！！！百度也不懂怎么用！！！！！！
     private Logger logger = LoggerFactory.getLogger(getClass());
     private static final String STRING_RESOURCE_PREFIX = "COD_";
     private static final String STRING_RESOURCE_SPLIT = "_";
     private static final String STRING_RESOURCE_MSG = "MSG";
     private static final String STRING_RESOURCE_ERROR = "ERR";
     private static final String SET_ACTUAL_VALUE = "setActualValue";
-
+    // private static修饰符:只能在自己的类中访问；final变量：引用不能被更改，可以像其中增加，删除和改变内容
     @Autowired
     private JdbcTemplate readJdbcTemplate;
 
@@ -57,6 +57,7 @@ public class ViewProcess {
      */
     public void process(Object object, String langId) {
         if (object instanceof ServiceResult) {
+            // instanceof运算符：指出对象是否是特定类的一个实例，返回布尔值
             ServiceResult serviceResult = (ServiceResult) object;
             if (serviceResult.isSuccess()) {
                 object = serviceResult.getResult();
